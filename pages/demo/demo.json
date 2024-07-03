@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-row": "tdesign-miniprogram/row/row",
+    "t-col": "tdesign-miniprogram/col/col",
+    "t-action-sheet": "tdesign-miniprogram/action-sheet/action-sheet",
+    "t-overlay": "tdesign-miniprogram/overlay/overlay"
+  }
+}

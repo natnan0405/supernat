@@ -1,0 +1,11 @@
+<view class="container">
+  <scroll-view scroll-y="true" type="custom" bindscroll="onScroll" class="scroll-view">
+    <view wx:for="{{screens}}" wx:key="index" class="screen" style="background:{{item.background}};" style="background: {{item.background}}">
+      <view class="content" style="opacity: {{index === currentIndex ? 1 : 0}}; transform: translateY({{index === currentIndex ? 0 : 20}}px);" data-index="{{index}}">
+        <t-button theme="primary">按钮</t-button>
+        <text class="title">{{item.title}}</text>
+        <text class="description">{{item.description}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

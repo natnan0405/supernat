@@ -1,0 +1,65 @@
+/* pages/swiper/index.wxss */
+
+.swiper-item {
+  position: relative;
+}
+.absolute-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.absolute-box .flex-box {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-title {
+  font-size: 17px;
+  width: calc(100vw);
+  line-height: 21px;
+  text-align: center;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.flex-banner {
+}
+
+.flex-banner .title {
+  line-height: 66px;
+  color: #FFF3E4;
+  font-family: Alimama ShuHeiTi;
+  font-size: 54px;
+  font-weight: bold;
+}
+
+.flex-banner .des {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 27px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.ul-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.ul-box .li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+}

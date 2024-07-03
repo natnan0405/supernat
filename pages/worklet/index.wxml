@@ -1,0 +1,86 @@
+<!-- <map class="bg" latitude="{{latitude}}" longitude="{{longitude}}" /> -->
+<image class="bg" src="https://images.pexels.com/photos/26690658/pexels-photo-26690658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" mode="aspectFill"/>
+
+<view class="search-wrp" style="padding-top: {{menuRect.bottom + menuRect.height}}px;">
+	<view class="search">
+		<image class="location" src="../../images/pokemon_location.png" />
+		<view class="input">Search here</view>
+		<image class="headImg" src="{{headImg}}" mode="aspectFill" />
+	</view>
+</view>
+
+<draggable-sheet
+ class="sheet"
+ style="height: {{sheetHeight}}px;"
+ initial-child-size="{{minSize}}"
+ min-child-size="{{minSize}}"
+ max-child-size="{{maxSize}}"
+ snap="{{false}}"
+ snap-sizes="{{[]}}"
+ worklet:onsizeupdate="onSizeUpdate"
+>
+  <scroll-view type="list" class="scroll-tab" scroll-x>
+    <view class="tab-inner">
+      <view class="tab-li {{active === index ? 'active' : ''}}" wx:for="{{tablist}}">
+        <view class="li-img "></view>
+        <view class="li-text">{{item}}</view>
+      </view>
+    </view>
+  </scroll-view>
+	<scroll-view
+	 associative-container="draggable-sheet"
+	 class="scrollable"
+	 scroll-y
+	 type="custom"
+	 show-scrollbar="{{false}}"
+	>
+		<sticky-section>
+			<sticky-header>
+				<view class="bar">
+					<view class="indicator" />
+				</view>
+				<view class="row title">
+					<text>Latest in the area</text>
+					<view class="outer-circle center">
+						<view class="inner-circle" />
+					</view>
+				</view>
+			</sticky-header>
+			<list-view>
+				<block wx:for="{{list}}" wx:key="id">
+					<view class="section">
+						<view class="card">
+							<view class="info">
+								<view class="row">
+									<image class="info-img" src="{{headImg}}" mode="aspectFill" />
+									<view class="column" style="margin-left: 10px;">
+										<text class="n-1">Selen Zeynep</text>
+										<text class="mini-txt">Local Guide • 14 reviews</text>
+									</view>
+								</view>
+								<view class="follow-btn"> Follow </view>
+							</view>
+							<image class="card-img" src="{{item.img}}" mode="aspectFill" />
+
+							<view class="row between" style="margin: 10px;">
+								<text class="mini-txt">2 days ago</text>
+								<view class="operation row">
+									<image class="opt-img" src="../../images/good.png" mode="aspectFill" />
+									<image class="opt-img" src="../../images/more.png" mode="aspectFill" />
+								</view>
+							</view>
+
+							<view class="bottom-intro column">
+								<text>Mud Island Amphitheaster</text>
+								<text class="mini-txt">4.4 🌟• Outdoor seasonal theaster • 0.6 mi</text>
+							</view>
+						</view>
+					</view>
+					<view class="spacer" />
+				</block>
+			</list-view>
+		</sticky-section>
+	</scroll-view>
+</draggable-sheet>
+
+

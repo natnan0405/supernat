@@ -1,0 +1,22 @@
+<view>
+  <!--  -->
+  <t-row gutter="16">
+    <t-col span="8">
+      <view class="dark">col-8</view>
+    </t-col>
+    <t-col span="8">
+      <view class="dark">col-8</view>
+    </t-col>
+    <t-col span="8">
+      <view class="dark">col-8</view>
+    </t-col>
+  </t-row>
+  <!--  -->
+  <t-action-sheet id="t-action-sheet" usingCustomNavbar bind:selected="handleSelected" />
+  <t-button size="large" variant="outline" bind:tap="handleAction" block theme="primary">列表型</t-button>
+  <t-button size="large" variant="outline" bind:tap="showDescAction" block theme="primary">带描述列表型</t-button>
+  <t-button size="large" variant="outline" bind:tap="showIconAction" block theme="primary">带图标列表型</t-button>
+  <!--  -->
+  <t-overlay visible="{{visible}}" duration="{{500}}" bind:click="handleOverlayClick" />
+  <t-button block size="large" theme="primary" variant="outline" bind:tap="handleClick">基础用法</t-button>
+</view>

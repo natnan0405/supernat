@@ -1,0 +1,19 @@
+<view class="block">
+  <t-navbar
+    title=""
+    left-arrow
+  />
+</view>
+<!-- 内容 -->
+<view class="page-box" style="padding-top: {{statusBarHeight}}px;">
+  <!-- tab -->
+  <view class="block">
+    <t-tabs value="{{value}}" defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+      <t-tab-panel label="家庭组成" value="0" />
+      <t-tab-panel label="空间" value="1" />
+      <t-tab-panel label="风格喜好" value="2" />
+    </t-tabs>
+  </view>
+  <!-- 进度条 -->
+  <t-progress theme="plump" percentage="80" />
+</view>

@@ -1,0 +1,8 @@
+<swiper style="width:{{screenWidth}}px;height:{{screenHeight}}px;" circular="{{true}}" vertical="{{true}}" interval="{{interval}}" easing-function="easeInOutCubic" layout-type="normal">
+  <!-- 第一屏 -->
+  <swiper-item wx:for="{{list}}" wx:for-key="index" wx:for-item="item">
+    <view class="swiper-item" style="width:{{screenWidth}}px;height:{{screenHeight}}px;">
+      <image src="{{item.url}}" mode="aspectFill" style="width:{{screenWidth}}px;height:{{screenHeight}}px" />
+    </view>
+  </swiper-item>
+</swiper>

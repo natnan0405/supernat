@@ -1,0 +1,27 @@
+<!--pages/tabbar/home.wxml-->
+<snapshot id="view">
+  <!-- 这里是要海报的 wxml -->
+  <view class="image-box">
+    <image src="/images/share.jpg" mode="widthFix"/>
+  </view>
+  <view class="text-box">
+    <view class="h1">
+      「未来城」时代公园
+    </view>
+    <view class="inner">
+      <view class="same">风格：新中式风格</view>
+      <view class="same">楼盘：合润御府  600平</view>
+      <view class="same">价格：4999元/m²</view>
+      <view class="same">设计理念：光与影的舞蹈，给予空间以灵魂。</view>
+    </view>
+  </view>
+</snapshot>
+
+<view class="gif-box">
+  <view class="image-box" bind:tap="changeSc">
+    <image class="default" src="/images/icon-sc.svg" mode="widthFix"/>
+    <image wx:if="{{collect}}" class="on" src="/images/icon-sc-on.svg" mode="widthFix"/>
+  </view>
+</view>
+
+<button class="button-box" bindtap="shareFunc">保存海报</button>

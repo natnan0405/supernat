@@ -1,0 +1,65 @@
+/* pages/tabbar/home.wxss */
+#view {
+  box-shadow: 0 0 10px #ccc;
+  margin: 0 20px 0;
+}
+.image-box {
+  width: calc(100vw - 40px);
+}
+
+.image-box image {
+  display: block;
+  width: 100%;
+  border-radius: 0 0 20px 0px;
+}
+
+.text-box {
+  padding: 20px;
+}
+
+.text-box .h1 {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.text-box .inner {
+  font-size: 15px;
+  padding: 10px 0 0;
+}
+
+.text-box .inner .same {
+  margin-bottom: 4px;
+  line-height: 17px;
+  color: #8D9091;
+}
+
+.button-box {
+  margin-top: 30px;
+}
+
+.gif-box {
+  background: #ccc;
+  width: 100vw;
+  height: 200px;
+  position: relative;
+}
+
+.gif-box .default{
+  width: 30px;
+  height: 30px;
+}
+
+.image-box {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.gif-box .on{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -7px;
+  top: -5px;
+  transform: scale(1.2); /* 鼠标悬停时放大到1.2倍 */
+}
